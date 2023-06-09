@@ -1,0 +1,25 @@
+
+[project]
+name = "sim_project"
+version = "0.0.1"
+description = "Some simulation project"
+dependencies = [
+    "pandas",
+    "tomli"
+]
+
+[project.optional-dependencies]
+TEST = [
+    "pytest",
+    "pytest-cov[all]"
+]
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
