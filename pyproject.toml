@@ -13,6 +13,14 @@ TEST = [
     "pytest",
     "pytest-cov[all]"
 ]
+LINT = [
+    "flake8"
+]
+CICD = [
+    "flake8",
+    "pytest",
+    "pytest-cov[all]"
+]
 
 [build-system]
 requires = [
