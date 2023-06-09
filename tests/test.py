@@ -29,8 +29,8 @@ def test_base_numberstream():
 
     res = nbst.get_numbers(1000)
     assert len(res) == 1000
-    assert all([ r <= 20 for r in res ])
-    assert all([ r >= 10 for r in res ])
+    assert all([r <= 20 for r in res])
+    assert all([r >= 10 for r in res])
 
 
 if __name__ == '__main__':

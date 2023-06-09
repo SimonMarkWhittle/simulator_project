@@ -3,6 +3,7 @@ from os.path import join as pjoin
 
 import pandas as pd
 
+
 class Outputter:
 
     MAX_OUTPUT_LEN = 100
@@ -38,4 +39,3 @@ class Outputter:
 
         if len(self.outputs) > Outputter.MAX_OUTPUT_LEN:
             self.write_outputs()
-

@@ -1,5 +1,4 @@
 import os
-from os.path import join as pjoin
 
 from simproj.simulator import Simulator
 
@@ -12,19 +11,17 @@ class SimConfigurator():
         if not isinstance(self.config, dict):
             raise TypeError("config needs to be a valid dictionary!")
 
-
     def configure_sim(self):
 
         match self.config:
             case {
                 "run": dict(),
                 "scenario": dict(),
-                "sim": { "numberstream": dict(), "rearrangement": dict() }
+                "sim": {"numberstream": dict(), "rearrangement": dict()}
             }:
                 pass
             case _:
                 raise ValueError("Invalid configuration passed to 'SimConfigurator'!")
-
 
         outputter = self._configure_outputter()
         numberstream = self._configure_numberstream()
@@ -54,22 +51,22 @@ class SimConfigurator():
         numstream = self.config["sim"]["numberstream"]
 
         match numstream:
-            case { "model": "Base", "minrange": int(), "maxrange": int() }:
+            case {"model": "Base", "minrange": int(), "maxrange": int()}:
                 from simproj.models.numberstream.base import BasicNumberstream
                 numberstream = BasicNumberstream(
                     numstream["minrange"],
                     numstream["maxrange"]
                 )
-            case { "model": "Base" }:
+            case {"model": "Base"}:
                 from simproj.models.numberstream.base import BasicNumberstream
                 numberstream = BasicNumberstream()
-            case { "model": "Numberstreamator", "minrange": int(), "maxrange": int() }:
+            case {"model": "Numberstreamator", "minrange": int(), "maxrange": int()}:
                 from simproj.models.numberstream.numberstreamator_adaptor import NumberstreamatorAdaptor
                 numberstream = NumberstreamatorAdaptor(
                     numstream["minrange"],
                     numstream["maxrange"]
                 )
-            case { "model": "Numberstreamator" }:
+            case {"model": "Numberstreamator"}:
                 from simproj.models.numberstream.numberstreamator_adaptor import NumberstreamatorAdaptor
                 numberstream = NumberstreamatorAdaptor()
             case _:
@@ -81,7 +78,7 @@ class SimConfigurator():
         rearrange = self.config["sim"]["rearrangement"]
 
         match rearrange:
-            case { "model": "Base" }:
+            case {"model": "Base"}:
                 from simproj.models.rearrangement.base import BasicRearrangement
                 rearranger = BasicRearrangement()
             case _:

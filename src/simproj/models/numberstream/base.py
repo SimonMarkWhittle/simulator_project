@@ -10,4 +10,4 @@ class BasicNumberstream:
         self.maxrange = maxrange
 
     def get_numbers(self, count: int) -> List[int]:
-        return [ randint(self.minrange, self.maxrange) for _ in range(count) ]
+        return [randint(self.minrange, self.maxrange) for _ in range(count)]

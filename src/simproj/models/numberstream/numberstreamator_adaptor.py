@@ -8,6 +8,7 @@ except ImportError:
 
 from typing import List
 
+
 class NumberstreamatorAdaptor:
 
     def __init__(self, minrange=0, maxrange=100):
@@ -24,4 +25,4 @@ class NumberstreamatorAdaptor:
         )
 
     def get_numbers(self, count: int) -> List[int]:
-        return [ self._numberstreamator.stream_numbers()[0] + self.minrange for _ in range(count) ]
+        return [self._numberstreamator.stream_numbers()[0] + self.minrange for _ in range(count)]
