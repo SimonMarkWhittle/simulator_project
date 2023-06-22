@@ -35,3 +35,4 @@ def test_base_numberstream():
 
 if __name__ == '__main__':
     test_simulator_outputs_volume()
+    test_base_numberstream()
