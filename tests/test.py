@@ -14,7 +14,6 @@ from simproj.simulator import Simulator
 
 from tests.mocks import MockOutputter
 
-OUTDIR = pjoin(os.path.dirname(__file__), 'outputs')
 CONFIGDIR = pjoin(os.path.dirname(__file__), 'config_files')
 
 
@@ -54,7 +53,6 @@ def test_noout_configurator():
 
     configurator = SimConfigurator(config)
 
-    os.rmdir(OUTDIR)
     with pt.raises(ValueError) as e_info:
         configurator.configure_sim()
 
