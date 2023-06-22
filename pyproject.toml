@@ -36,4 +36,4 @@ where = ["src"]
 testpaths = [
     "tests"
 ]
-addopts = "--cov-branch --cov-report term-missing --cov-fail-under 80"
+addopts = "--cov-branch --cov-report term-missing --cov-report json --cov-fail-under 80"
