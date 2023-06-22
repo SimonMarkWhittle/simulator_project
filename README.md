@@ -1,5 +1,5 @@
 
-[![cov](https://simonmarkwhittle.github.io/simulator_project/badges/coverage.svg)](https://github.com/simonmarkwhittle/simulator_project/actions)
+[![cov](https://simonmarkwhittle.github.io/simulator_project/coverage.svg)](https://github.com/simonmarkwhittle/simulator_project/actions)
 
 # Simulator Project Test
 This codebase is a test package with which I am practicing modern Python configuration management, optional dependencies management, and editable local package installation.  
