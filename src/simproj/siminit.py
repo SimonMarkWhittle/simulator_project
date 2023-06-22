@@ -37,7 +37,7 @@ class SimConfigurator():
         run = self.config["run"]
 
         out_path = run["out_dir"]
-        create_out_dir = run.get("out_dir", False)
+        create_out_dir = run.get("create_out_dir", False)
 
         if not os.path.isdir(out_path) and create_out_dir:
             os.mkdir(out_path)

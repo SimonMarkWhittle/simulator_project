@@ -1,0 +1,12 @@
+[run]
+out_dir = "./tests/outputs"
+create_out_dir = true
+
+[scenario]
+num_steps = 100
+
+[sim.numberstream]
+model = "Base"
+
+[sim.rearrangement]
+model = "Base"

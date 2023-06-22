@@ -1,0 +1,15 @@
+
+[run]
+out_dir = "zongo"
+create_out_dir = false
+
+[scenario]
+num_steps = 100
+
+[sim.numberstream]
+model = "Base"
+minrange = -50
+maxrange = 400
+
+[sim.rearrangement]
+model = "Base"

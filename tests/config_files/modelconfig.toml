@@ -1,0 +1,15 @@
+
+[run]
+out_dir = "./tests/outputs"
+create_out_dir = true
+
+[scenario]
+num_steps = 100
+
+[sim.numberstream]
+model = "Numberstreamator"
+minrange = -50
+maxrange = 400
+
+[sim.rearrangement]
+model = "Base"
