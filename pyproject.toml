@@ -20,7 +20,8 @@ CICD = [
     "flake8",
     "pytest",
     "pytest-cov[all]",
-    "pyre-check"
+    "pyre-check",
+    "coverage-badge"
 ]
 
 [build-system]
