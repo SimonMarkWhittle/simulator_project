@@ -36,4 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest --cov=src/ --cov-branch --cov-report --cov-fail-under 80 term-missing tests/test.py
+        pytest --cov=src/ --cov-branch --cov-report term-missing --cov-fail-under 80 tests/test.py
